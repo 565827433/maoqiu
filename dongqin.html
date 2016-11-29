@@ -1,0 +1,285 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>东北大学秦皇岛分校官网</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/css.css">
+    <link rel="stylesheet" href="script/script.js">
+</head>
+<style>
+    .banner{
+        width: 1280px;
+        background-color: #fff;
+        height: 398px;
+    }
+    #container{
+        width: 1200px;
+        height: 396px;
+        overflow: hidden;
+        position: relative;
+        margin: 0 auto;
+    }
+    .banner #list{
+        height: 396px;
+        width: 14400px;
+        position: absolute;
+        z-index: 1;
+    }
+    .banner img{
+        height: 396px;
+        width: 1200px;
+        float: left;
+    }
+    #buttons{
+        position: absolute;
+        z-index: 2;
+        bottom: 15px;
+        left: 470px;
+    }
+    #buttons span{
+        margin-left:10px;
+        height: 12px;
+        background-color:yellow;
+        width: 12px;
+        border-radius: 50%;
+        cursor: pointer;
+        float: left;
+    }
+    .arrow1{
+        left: 0px;
+    }
+    .arrow2{
+        right: 0px;
+    }
+    .banner a{
+        position: absolute;
+        top: 160px;
+        z-index: 2;
+        float: left;
+        height: 80px;
+        width: 50px;
+        display: none;
+    }
+    .banner a img{
+        height: 80px;
+        width: 50px;
+    }
+    .banner:hover a{
+        display: block;
+    }
+    #buttons .on {
+        background-color: #fff;
+    }
+</style>
+<script>
+    window.onload=function(){
+        var container=document.getElementById('container');
+        var list=document.getElementById('list');
+        var buttons=document.getElementById('buttons').getElementsByTagName('span');
+        var prev=document.getElementById('prev');
+        var next=document.getElementById('next');
+        var index=1;
+        var animated=false;
+        var timer;
+
+        function showButton(){
+            for( var i = 0;i < buttons.length;i++){
+                if(buttons[i].className=='on'){ buttons[i].className='';
+                break;
+                }
+            }buttons[index - 1].className = 'on';
+        }
+        function animate(offset){
+            animated=true;
+            var newleft = parseInt(list.style.left) + offset;
+            var time=450;  //位移时间
+            var interval = 30;//位移间隔时间
+            var speed = offset/(time/interval);//每次位移量
+            function go() {
+                if((speed<0 && parseInt(list.style.left)>newleft)||(speed>0 && parseInt(list.style.left)<newleft)){
+                    list.style.left = parseInt(list.style.left) + speed +'px';
+                    setTimeout(go,interval);
+                     }else { animated=false;
+                         list.style.left = newleft+'px';
+                    if (newleft > -1200) {
+                        list.style.left = -12000 + 'px';
+                    }
+                    if (newleft < -12000) {
+                        list.style.left = -1200 + 'px';
+                    }
+                }
+            }
+            go();
+        }
+        next.onclick=function(){
+            if (index == 10) {
+                index = 1;
+            } else {index += 1}
+            showButton();
+            if(animated==false){
+                animate(-1200);
+            }
+
+        }
+        prev.onclick=function(){
+            if (index == 1) {
+                index = 10;
+            } else {index -= 1}
+            showButton();
+            if(animated==false){
+                animate(1200);
+            }
+        }
+        for(var i=0;i<buttons.length;i++){
+            buttons[i].onclick = function(){
+
+                var myindex = parseInt(this.getAttribute('index'));
+                if(myindex==index){return;}
+                var offset = -1200*(myindex-index);
+                if(animated==false){
+                    animate(offset);
+                }
+                animate(offset);
+                index=myindex;
+                showButton();
+            }
+        }
+    }
+</script>
+<body>
+<div class="header">
+    <div class="top">
+        <a href="#" class="topleft">学生</a>
+        <a href="#" class="topleft">教职工</a>
+        <a href="#" class="topleft">访客</a>
+        <a href="#" class="topleft">家长</a>
+        <a href="#" class="topleft">校友</a>
+        <a href="#" class="topright">服务门户</a>
+        <a href="#" class="topright">电子邮件</a>
+        <a href="#" class="topright">东北大学</a>
+        <a href="#" class="topright">旧版浏览</a>
+    </div>
+    <div class="logo">
+        <img src="images/1.png" alt="">
+        <input type="text">
+        <a href="#" class="logoa"><img src="images/3.png" alt=""></a>
+    </div>
+    <div class="nav">
+            <a href="#" style="margin-left: 45px;"><ul>学校概况<li class="navali" style="top:50px;">学校简介</li><li class="navali" style="top:80px;">现任领导</li><li class="navali" style="top:110px;">组织机构</li><li class="navali" style="top:140px;">校歌校训校标</li><li class="navali" style="top:170px;">校园风景</li></ul></a>
+            <a href="#"><ul>院系设置<li class="navali" style="top:50px;">研究生分院</li><li class="navali" style="top:80px;">经济学院</li><li class="navali" style="top:110px;">管理学院</li><li class="navali" style="top:140px;">计算机与通信工程学院</li><li class="navali" style="top:170px;">控制工程学院</li><li class="navali" style="top:200px;">语言学院</li><li class="navali" style="top:230px;">数学与统计学院</li><li class="navali" style="top:260px;">资源与材料学院</li><li class="navali" style="top:290px;">社会科学研究院</li><li class="navali" style="top:320px;">体育部</li></ul></a>
+            <a href="#"><ul>教学科研<li class="navali" style="top:50px;">师资队伍</li><li class="navali" style="top:80px;">本科生教育</li><li class="navali" style="top:110px;">研究生教育</li><li class="navali" style="top:140px;">教学管理系统</li><li class="navali" style="top:170px;">科研管理系统</li><li class="navali" style="top:50px;">学术会议</li></ul></a>
+            <a href="#"><ul>招生就业<li class="navali" style="top:50px;">本科生</li><li class="navali" style="top:80px;">研究生</li></ul></a>
+            <a href="#"><ul>人才招聘</ul></a>
+            <a href="#"><ul>国际合作交流</ul></a>
+            <a href="#"><ul>创新创业</ul></a>
+            <a href="#"><ul>校园生活<li class="navali" style="top:50px;">文化生活</li><li class="navali" style="top:80px;">体育健康</li><li class="navali" style="top:110px;">校园安全</li><li class="navali" style="top:140px;">交通地图</li><li class="navali" style="top:170px;">校历</li><li class="navali" style="top:200px;">服务信息</li></ul></a>
+    </div>
+    <div class="banner">
+        <div id="container">
+            <div id="list" style="left: -1200px;">
+                <img src="images/lun10.jpg" alt="" />
+                <img src="images/lun1.jpg" alt="" />
+                <img src="images/lun2.jpg" alt="" />
+                <img src="images/lun3.jpg" alt="" />
+                <img src="images/lun4.jpg" alt="" />
+                <img src="images/lun5.jpg" alt="" />
+                <img src="images/lun6.jpg" alt="" />
+                <img src="images/lun7.jpg" alt="" />
+                <img src="images/lun8.jpg" alt="" />
+                <img src="images/lun9.jpg" alt="" />
+                <img src="images/lun10.jpg" alt="" />
+                <img src="images/lun1.jpg" alt="" />
+            </div>
+            <div id="buttons">
+                <span index="1" class="on"></span>
+                <span index="2" ></span>
+                <span index="3" ></span>
+                <span index="4" ></span>
+                <span index="5" ></span>
+                <span index="6" ></span>
+                <span index="7" ></span>
+                <span index="8" ></span>
+                <span index="9" ></span>
+                <span index="10" ></span>
+            </div>
+            <a href="javascript:;" class="arrow1" id="prev"><img src="images/l.png" alt=""></a>
+            <a href="javascript:;" class="arrow2" id="next"><img src="images/r.png" alt=""></a>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="ctop">
+        <div class="ctop1"><h1>头条新闻</h1><a href="#"><img src="images/4.png" alt=""></a></div>
+        <div class="ctop2"><img src="images/5.jpg" alt=""><p class="p1">17</p><p class="p2">2016.11</p><a href="#" class="ctop2a1">我校召开本科专业审核评估工作汇报会</a><a href="#" class="ctop2a2">11月16日，市委组织部副部长张卫民一行来校调研秦皇岛市“智慧党建”平台2016年的建设与应用情况，我校副校长李晓奇，校长助理、......</a></div>
+        <div class="ctop2"><img src="images/6.jpg" alt=""><p class="p1">15</p><p class="p2">2016.11</p><a href="#" class="ctop2a1">市委组织部副部长张卫民一行来校调研</a><a href="#" class="ctop2a2">11月14日，由党委宣传部、社会科学研究院联合举办的第三期宣传思想理论工作坊走进经济学院、管理学院于科技楼3065报告厅顺利举办......</a></div>
+        <div class="ctop2"><img src="images/7.jpg" alt=""><p class="p1">14</p><p class="p2">2016.11</p><a href="#" class="ctop2a1" style="width: 270px;">宣传思想理论工作坊顺利举办</a><a href="#" class="ctop2a2">11月13日，东北大学秦皇岛分校中国满学研究院成立大会暨揭牌仪式在科技楼9024报告厅隆重举行。教育部民族教育司司长毛力提•满苏......</a></div>
+    </div>
+    <div class="ccenter">
+        <div class="cleft">
+            <div class="cleft1">
+                <h1>学校新闻</h1><a href="#">更多 > </a><ul>
+                <li><span>2016年11月04日</span><a href="#">我校召开本科专业审核评估工作汇报会</a></li>
+                <li><span>2016年11月04日</span><a href="#">市委组织部副部长张卫民一行来校调研</a></li>
+                <li><span>2016年09月23日</span><a href="#">宣传思想理论工作坊顺利举办</a></li>
+                <li><span>2016年09月09日</span><a href="#">我校2017年全国硕士研究生统一入学考试现场确认工作顺利结束</a></li>
+                <li><span>2016年09月08日</span><a href="#">“激扬青春，放飞梦想”——管理学院2016级迎新晚会圆满落幕</a></li>
+                <li><span>2016年09月08日</span><a href="#">建设高端文化研究基地 打造东大特色品牌——中国第一所满学研究院落户东北大…</a></li></ul>
+                <h1>通知公告</h1><a href="#">更多 > </a><ul>
+                    <li><span>2016年11月18日</span><a href="#">岗位招聘启事</a></li>
+                    <li><span>2016年11月17日</span><a href="#">东北大学秦皇岛分校2016年非专任教师岗位招聘启事（三）</a></li>
+                    <li><span>2016年11月15日</span><a href="#">关于我校在职女教职工专项体检的通知</a></li>
+                    <li><span>2016年11月15日</span><a href="#">关于表彰从事教育工作三十年教职工的决定</a></li>
+                    <li><span>2016年11月15日</span><a href="#">关于2016年中秋节、国庆节放假安排的通知</a></li>
+                    <li><span>2016年11月14日</span><a href="#">关于“人民医院”专家来校义诊的通知</a></li></ul>
+            </div>
+        </div>
+        <div class="cright">
+            <div class="cright1"><img src="images/8.jpg" alt=""><ul>
+                <li class="li1" style="padding: 20px 0 0 20px;"><a href="#">【河北教育网】东北大学秦皇岛分校学生喜获2016年“创青春…</a></li>
+                <li class="li1" style="border-top:1px dashed #d0d0d0;border-bottom:1px dashed #d0d0d0;"><a href="#">【河北新闻网】【秦皇岛晚报】全国第一所满学研究院在秦皇…</a></li>
+                <li class="li1"><a href="#">【河北教育网】秦皇岛市长张瑞书、东软集团董事长兼首席执…</a></li>
+                </ul>
+                <ul>
+                    <li class="li2"><a href="#">【河北新闻网】【新民网】秦皇岛海港区举办科普主题活动</a></li>
+                    <li class="li2"><a href="#">【秦皇岛电视台】傅杖子村：废井产“锶”水 新增致富路</a></li>
+                    <li class="li2"><a href="#">【河北日报】东大秦皇岛分校学生研发出自动牙膏器</a></li></ul>
+            </div>
+            <div class="cright2">
+                <img src="images/9.jpg" alt="">
+                <a href="#" class="a1"><h2>焦点·专题</h2></a>
+                <a href="#" class="a2">东北大学秦皇岛分校迎来2016…</a>
+                <p>近日，在东北大学秦皇岛分校的校园内，一些“特别”的身影格外引人注目。原来，学校2016级留学… <a href="#" class="a3">>> 详细</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="cfooter"><span><h1 style="">专题网站</h1><a href="#" class="a1">>> 更多专题</a></span>
+        <a href="#"><img src="images/10.jpg" alt="" style="margin-left: 50px;"></a>
+        <a href="#"><img src="images/11.jpg" alt=""></a>
+        <a href="#"><img src="images/12.jpg" alt=""></a>
+        <a href="#"><img src="images/13.jpg" alt=""></a>
+    </div>
+</div>
+<div class="footer">
+    <div class="footer1">
+        <div class="footerl">
+            <p>公共服务</p>
+            <a href="#">信息公开</a>
+            <a href="#">招标采购</a>
+            <a href="#">形象识别</a>
+            <a href="#">服务信息</a>
+            <a href="#">远程访问</a>
+            <a href="#">馆藏检索</a>
+            <a href="#">办公电话</a>
+            <a href="#">云端东秦</a>
+            <a href="#">学生校长助理留言</a>
+        </div>
+        <div class="footerc"><img src="images/15.png" alt=""></div>
+        <div class="footerr"><img src="images/16.png" alt=""><p>扫描微信二维码</p></div>
+    </div>
+    <div class="footer2">
+        <p>版权所有©东北大学秦皇岛分校 | 地址：河北省秦皇岛经济技术开发区泰山路143号 | 邮编：066004 | 技术维护：东北大学秦皇岛分校信息化建设与管理办公室 | 冀ICP备字05002793号 |</p>
+        <a href="#"><img src="images/17.png" alt="">冀公网安备 13030202000995号</a>
+    </div>
+</div>
+</body>
+</html>
