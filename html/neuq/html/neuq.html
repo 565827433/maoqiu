@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>东北大学秦皇岛分校学生会</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/bootstrapstyle.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+</head>
+<style>
+    body{
+        width: auto;
+        height: auto;
+        background-color: rgba(0,0,0,0);
+    }
+    .header{
+        height: 50px;
+        width: 1100px;
+        margin:auto;
+        margin-bottom:30px;
+        margin-top: 20px;
+
+    }
+    .header li{
+        float: right;
+        height: 50px;
+        line-height: 60px;
+        width: 100px;
+        font-family: SimHei;
+    }
+    .header li a{
+        text-align: center;
+        font-size: 15px;
+        font-family:Helvetica,Tahoma,Arial,"Hiragino Sans GB","Microsoft YaHei";
+        color: rgba(0,0,0,0.5);
+        text-decoration:none;
+    }
+    .header li a:hover{
+        color: rgba(0,0,0,0.8);
+    }
+    .bigcontainer{
+        width: auto;
+        background-color: rgba(0,0,0,0.05);
+    }
+    .container{
+        height: 600px;
+        width: 1280px;
+        margin:0 auto 30px auto;
+        overflow: hidden;
+        position: relative;
+    }
+    .container .contain{
+        width: 8960px;
+        height: 600px;
+        margin:auto;
+        position: absolute;
+        z-index: 1;
+
+    }
+    .container .contain img{
+        width: 1280px;
+        height: 600px;
+        float: left;
+    }
+    .buttons{
+        height: 30px;
+        width: 200px;
+        position: absolute;
+        top: 560px;
+        left:540px;
+        z-index: 2;
+        float: left;
+    }
+    .buttons span{
+        height: 12px;
+        width: 12px;
+        background-color:#515151;
+        margin-left:18px;
+        float: left;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    .container .buttons .on{
+        background-color: transparent;
+        border: 1px solid white;
+    }
+
+
+    .container .arrow1{
+        height: 100px;
+        width: 50px;
+        background-color:rgba(0,0,0,0.4);
+        position: absolute;
+        z-index: 3;
+        top:250px;
+        left: 0px;
+        font-size: 70px;
+        font-family:"宋体";
+        text-align: center;
+        text-decoration: none;
+        color:white;
+        display: none;
+    }
+    .container .arrow2{
+        position: absolute;
+        height: 100px;
+        width: 50px;
+        background-color:rgba(0,0,0,0.4);
+        position: absolute;
+        z-index: 3;
+        top:250px;
+        right: 0px;
+        display: block;
+        font-size: 70px;
+        text-align: center;
+        font-family:"宋体";
+        text-decoration: none;
+        color:white;
+        display: block;
+        display: none;
+    }
+    .container:hover a{
+        display: block;
+    }
+
+    .container2{
+        margin: auto;
+        margin-top:70px;
+        height: 450px;
+        width: 1280px;
+    }
+    .dimg1{
+        width: 425px;
+        height:200px;
+        float: left;
+        position: relative;
+    }
+    .dimg2{
+        top:30px;
+        width: 637px;
+        float:left;
+        position: relative;
+    }
+    .img1{
+        margin-left: 140px;
+        height: 140px;
+        width: 155px;
+        border-radius: 50%;
+    }
+    .container2 img:hover{
+        box-shadow:7px 7px 7px  #3c3c3c;
+    }
+    .img2{
+        height: 140px;
+        width: 155px;
+        border-radius: 50%;
+    }
+    #myimg4{
+        margin-left:350px;
+    }
+    #myimg5{
+        margin-left:140px;
+    }
+    .img1:hover{
+        height: 145px;
+        width: 160px;
+    }
+    .img2:hover{
+        height: 145px;
+        width: 160px;
+    }
+    .container2 .p1{
+        position: absolute;
+        z-index: 1;
+        left: 195px;
+        top: 150px;
+        font-size: 18px;
+        color: rgba(0,0,0,0.5);
+    }
+    .container2 .p2{
+        position: absolute;
+        z-index: 1;
+        left: 400px;
+        top: 145px;
+        font-size: 18px;
+        color: rgba(0,0,0,0.5);
+    }
+    .container2 .p3{
+        position: absolute;
+        z-index: 1;
+        left: 195px;
+        top: 148px;
+        font-size: 18px;
+        color: rgba(0,0,0,0.5);
+    }
+    .container2 p:hover{
+        color: rgba(0,0,0,0.8);
+    }
+
+    .footer{
+        margin:auto;
+        height: 250px;
+        width:auto;
+        background-color: #183884;
+    }
+    .footer1{
+        margin:auto;
+        height: 250px;
+        width:1280px;
+        position: relative;
+    }
+    .footer1 .img11{
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        left: 855px;
+        top: 80px;
+    }
+    .p11{
+        color: white;
+        position: absolute;
+        left:873px;
+        top: 44px;
+        font-family: SimHei;
+    }
+    .footer1 .img22{
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        left: 1045px;
+        top: 80px;
+    }
+    .p22{
+        color: white;
+        position: absolute;
+        left:1063px;
+        top: 44px;
+        font-family: SimHei;
+    }
+    .xia{
+        width: 250px;
+        height: 40px;
+        background-color: #000;
+        position: absolute;
+        top: 140px;
+        left: 190px;
+    }
+    .zhong1{
+        width: 100px;
+        height: 40px;
+        position: absolute;
+        top: 85px;
+        left: 190px;
+        background-color: #000;
+    }
+    .zhong2{
+        width: 100px;
+        height: 40px;
+        position: absolute;
+        top: 85px;
+        left: 340px;
+        background-color: #000;
+    }
+    .shang1{
+        width: 100px;
+        height: 40px;
+        position: absolute;
+
+        left:190px;
+        top: 30px;
+        background-color: #000;
+    }
+    .shang2{
+        width: 100px;
+        height: 40px;
+        position: absolute;
+        top: 30px;
+        left: 340px;
+        background-color: #000;
+    }
+    .foo{
+        position: absolute;
+        font-size: 18px;
+        top: 210px;
+        left: 500px;
+        color:white;
+        font-family: SimHei;
+    }
+.guan{
+        color: white;
+        position: absolute;
+        top: 50px;
+        left: 700px;
+        font-size: 18px;
+        font-family: SimHei;
+    }
+
+</style>
+<script>
+    window.onload=function () {
+        var container=document.getElementById("container");
+        var list=document.getElementById("list");
+        var buttons=document.getElementById("buttons").getElementsByTagName("span");
+        var prev=document.getElementById("prev");
+        var next=document.getElementById("next");
+        var index=0;
+        var lastindex=0;
+        var timer;
+        var fasion=false;
+
+        function showbutton() {
+            for(var i=0;i<buttons.length;i++){
+                if(buttons[i].className=="on"){
+                    buttons[i].className="";
+                }
+            }
+            buttons[index].className="on";
+        }
+
+        function animate(thepx) {
+            fasion=true;
+            if(thepx==0){
+                return;
+            }
+            newleft=parseInt(list.style.left)+thepx;
+            var time=250;  //位移时间
+            var interval=2;   //位移间隔时间
+            var speed=thepx/(time/interval);   //每次位移量
+            function go() {
+                if((speed<0 && parseInt(list.style.left)>newleft)||(speed>0 && parseInt(list.style.left)<newleft)){
+                    list.style.left = parseInt(list.style.left) + speed +'px';
+                    setTimeout(go,interval);
+                }else {
+                    list.style.left = newleft+'px';
+                    if (newleft > -1280) {
+                        list.style.left = -6400 + 'px';
+                    }
+                    if (newleft < -6400) {
+                        list.style.left = -1280 + 'px';
+                    }
+                    fasion=false;
+                }
+            }
+            go();
+        }
+
+        prev.onclick=function(){
+            if(fasion==false){
+                animate(1280);
+                index--;
+                if(index<0){
+                    index=4;
+                }
+                showbutton();
+            }
+        }
+        next.onclick=function () {
+            if(fasion==false){
+                animate(-1280);
+                index++;
+                if(index>4){
+                    index=0;
+                }
+                showbutton();
+            }
+        }
+
+        for(var i=0;i<buttons.length;i++){
+            if(fasion==false){
+                buttons[i].onclick=function () {
+                    if(this.className=="on"){
+                        return;
+                    }
+                    lastindex=index;
+                    var myindex = parseInt(this.getAttribute('index'));
+                    index=myindex;
+                    buttons[index].className="on";
+                    animate(-1280*(index-lastindex));
+                    showbutton();
+                }
+            }
+        }
+        function play() {
+            timer = setInterval(function(){
+                next.onclick();
+            },3000);
+        }
+        function stop() {
+            clearInterval(timer);
+        }
+        container.onmouseout=play;
+        container.onmouseover=stop;
+
+//        var img=new Array(6);
+//
+//        var i=1;
+//        for(i=1;i<6;i++){
+//            img[i]=document.getElementById("myimg"+i);
+//
+//        }
+//
+//        img[1].onmouseover=function () {
+//            img[1].style.width=190+"px";
+//            img[1].style.height=170+"px";
+//
+//        };
+//        img[1].onmouseout=function () {
+//            img[1].style.width=155+"px";
+//            img[1].style.height=140+"px";
+//
+//        };
+//        img[2].onmouseover=function () {
+//            img[2].style.width=190+"px";
+//            img[2].style.height=170+"px";
+//        };
+//        img[2].onmouseout=function () {
+//            img[2].style.width=155+"px";
+//            img[2].style.height=140+"px";
+//        };
+//        img[3].onmouseover=function () {
+//            img[3].style.width=190+"px";
+//            img[3].style.height=170+"px";
+//        };
+//        img[3].onmouseout=function () {
+//            img[3].style.width=155+"px";
+//            img[3].style.height=140+"px";
+//        };
+//        img[4].onmouseover=function () {
+//            img[4].style.width=190+"px";
+//            img[4].style.height=170+"px";
+//        };
+//        img[4].onmouseout=function () {
+//            img[4].style.width=155+"px";
+//            img[4].style.height=140+"px";
+//        };
+//        img[5].onmouseover=function () {
+//            img[5].style.width=190+"px";
+//            img[5].style.height=170+"px";
+//        };
+//        img[5].onmouseout=function () {
+//            img[5].style.width=155+"px";
+//            img[5].style.height=140+"px";
+//        };
+    }
+</script>
+
+<body>
+<div class="header">
+    <ul>
+        <li ><a href="#">活动一览</a></li>
+        <li ><a href="#">新闻公告</a></li>
+        <li ><a href="#">友情链接</a></li>
+        <li ><a href="#"> 组织概况 </a></li>
+    </ul>
+</div>
+<div class="bigcontainer">
+
+    <div class="container" id="container">
+        <div class="contain" id="list" style="left: -1280px">
+            <a href="http://mp.weixin.qq.com/s?__biz=MzI0MjE1MzUwOA==&mid=2651159559&idx=1&sn=1e85ed0185bf65aa6bf791f85c71cb7a&chksm=f2f17d4cc586f45aa697f07d8b2ac6cb531e3d402046ab461838
+            b3f0da511b89712a0acf7f2e&mpshare=1&scene=23&srcid=0325z1TxnW4LRgmmQdNp3Asf#rd"><img src="../img/img5.jpg" alt=""></a>
+            <a href="http://mp.weixin.qq.com/s?__biz=MzI0MjE1MzUwOA==&mid=2651159568&idx=1&sn=e521247d35677dcdca307b699c28aedd&chksm=f2f17d5bc586f44dc4cbf230c49fb3b436080a50b8aea
+           304f2121be68daf343996b7daff3ae2&mpshare=1&scene=23&srcid=0325EPgvzSxaO5CrwC39ZCqy#rd"> <img src="../img/img1.jpg" alt=""></a>
+            <a href="http://mp.weixin.qq.com/s?__biz=MzI0MjE1MzUwOA==&mid=2651159582&idx=1&sn=10ea2c9070c5f1d72637bdf3397838bb&chksm=f2f17d55c586f4432364d75bda2c8ef5a05fb0bec363
+            048d52b8d44fbafb4c908099c70bd43b&mpshare=1&scene=23&srcid=0325HtEFzluDi3A6kVM3mS2X#rd"><img src="../img/img2.jpg" alt=""></a>
+            <a href="http://mp.weixin.qq.com/s?__biz=MzI0MjE1MzUwOA==&mid=2651159573&idx=1&sn=ad213e61aa83155e8ccda7c850df8e76&chksm=f2f17d5ec586f448251d70ca11da19ab6b5fe77037d4
+           bc3b1248be3f3b0694a32d8515954db4&mpshare=1&scene=23&srcid=0325HyIGmLbZ05LRO39xwE6K#rd"> <img src="../img/img3.jpg" alt=""></a>
+            <a href="http://mp.weixin.qq.com/s?__biz=MzI0MjE1MzUwOA==&mid=2651159575&idx=1&sn=02a877f6adc302bea19f9531bd3b3d58&chksm=f2f17d5cc586f44ab534d006221d515b1a04b692f679
+            134ea5ca7b5e3c319432a95eeaa0feee&mpshare=1&scene=23&srcid=03255uqjSfaFiWjqh0B082JG#rd"><img src="../img/img4.jpg" alt=""></a>
+            <a href="http://mp.weixin.qq.com/s?__biz=MzI0MjE1MzUwOA==&mid=2651159559&idx=1&sn=1e85ed0185bf65aa6bf791f85c71cb7a&chksm=f2f17d4cc586f45aa697f07d8b2ac6cb531e3d402046a
+           b461838b3f0da511b89712a0acf7f2e&mpshare=1&scene=23&srcid=0325z1TxnW4LRgmmQdNp3Asf#rd">  <img src="../img/img5.jpg" alt=""></a>
+            <a href="http://mp.weixin.qq.com/s?__biz=MzI0MjE1MzUwOA==&mid=2651159568&idx=1&sn=e521247d35677dcdca307b699c28aedd&chksm=f2f17d5bc586f44dc4cbf230c49fb3b436080a50b8ae
+            a304f2121be68daf343996b7daff3ae2&mpshare=1&scene=23&srcid=0325EPgvzSxaO5CrwC39ZCqy#rd"><img src="../img/img1.jpg" alt=""></a>
+        </div>
+        <div class="buttons" id="buttons">
+            <span index="0" class="on"></span>
+            <span index="1"></span>
+            <span index="2"></span>
+            <span index="3"></span>
+            <span index="4"></span>
+        </div>
+        <a href="javascript:;" class="arrow1" id="prev">&lt;</a>
+        <a href="javascript:;" class="arrow2" id="next">&gt;</a>
+
+    </div>
+</div>
+<div class="container2">
+    <div class="dimg1"><p class="p1" id="p1" class="text-capitalize">办公室</p><a href="#"><img src="../img/ban.jpg" alt="办公室" class="img1" id="myimg1"></a></div>
+    <div class="dimg1"><p class="p1" id="p2" class="text-capitalize">宣传部</p><a href="#"><img src="../img/xuan.jpg" alt="宣传部" class="img1" id="myimg2"></a></div>
+    <div class="dimg1"><p class="p1" id="p3" class="text-capitalize">外联部</p><a href="#"><img src="../img/wai.jpg" alt="外联部" class="img1" id="myimg3"></a></div>
+    <div class="dimg2"><p class="p2" id="p4" class="text-capitalize">文艺部</p><a href="#"><img src="../img/wen.jpg" alt="文艺部" class="img2" id="myimg4"></a></div>
+    <div class="dimg2"><p class="p3" id="p5" class="text-capitalize">生活部</p><a href="#"><img src="../img/sheng.jpg" alt="生活部" class="img2" id="myimg5"></a></div>
+
+
+
+
+
+</div>
+<div class="footer">
+    <div class="footer1">
+        <p class="p11">东秦小霁</p>
+        <p class="p22">东秦团委</p>
+        <img src="../img/xiaoji.jpg" alt="" class="img11">
+        <img src="../img/tuanwei.jpg" alt="" class="img22">
+        <div class="xia"></div>
+        <div class="zhong1"></div><div class="zhong2"></div>
+        <div class="shang1"></div><div class="shang2"></div>
+        <p class="guan">关注我们：</p>
+        <p class="foo">东北大学秦皇岛分校学生会</p>
+    </div>
+</div>
+</body>
+
+
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js">/*IE6,7,8兼容html5*/</script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js">//IE6，7，8兼容css3</script>
+<script rel="stylesheet." src="../js/jquery-3.1.1.js"></script>
+<script rel="stylesheet." src="../bootstrap/js/bootstrap.min.js"></script>
+</html>
