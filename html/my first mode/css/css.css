@@ -68,10 +68,10 @@
     border:#286bc5 solid 2px;
 }
 .header .nav{
-    background-color:#004EA1;
-    height: 50px;
-    width:1280px;
-}
+     background-color:#004EA1;
+     height: 50px;
+     width:1280px;
+ }
 .header .nav a{
     text-decoration: none;
     width: 145px;
