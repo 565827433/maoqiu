@@ -148,14 +148,14 @@ body{
 }
 
 .footer{
-    margin-top: 55px;
+    margin-top: 0px;
     width: 1200px;
-    height: 280px;
+    height: 190px;
     margin: auto;
 }
 .footer1{
     width: 1200px;
-    height: 240px;
+    height: 150px;
     background-image:url("../img/14.jpg");
 }
 .footer2{
@@ -163,19 +163,18 @@ body{
     height: 40px;
 }
 .footerleft{
-    width: 350px;
-    height: 120px;
+    width: 300px;
+    height: 150px;
     line-height: 125px;
     text-align: center;
     float: left;
-    margin:50px 10px 0 30px;
+    margin:0px 10px 0 30px;
 }
 
 .footercen{
     width: 400px;
-    height: 180px;
+    height: 150px;
     float: left;
-    margin-top: 20px;
     border-left:1px solid #3d6998;
     border-right:1px solid #3d6998;
 }
@@ -205,18 +204,21 @@ body{
 
 .footerright{
     width: 400px;
-    height: 180px;
+    height: 150px;
     float: left;
-    margin-top: 20px;
 }
 .footerright p{
     color: #a6c4df;
     margin: 0px 0px 0px 30px;
     text-decoration: none;
     font-size: 15px;
-    height: 40px;
-    line-height:40px;
+    height: 30px;
+    line-height:30px;
     text-align: left;
+}
+.footerleft .flimg{
+    width: 150px;
+    height: 150px;
 }
 .footer2 p{
     height: 40px;
