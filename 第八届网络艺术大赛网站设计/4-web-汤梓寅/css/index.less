@@ -1,0 +1,225 @@
+@light-blue: #004EA1;
+@dark-blue: #073F7B;
+@font-blue: #3C8CDE;
+body{padding-top: 80px;}
+
+//nav
+.navbar-brand{
+  #impl{width: 220px;}
+  span{
+    margin-top: 15px;
+    margin-left: 20px;
+    padding-left: 10px;
+    font-size: 24px;
+    color: @dark-blue;
+    border-left: 2px solid #ddd;
+  }
+}
+@media (max-width: 1200px) and (min-width: 768px){
+  .nav > .disabled{display: none;}
+}
+@media (max-width: 512px) {
+  .navbar-brand > span{display: none;}
+}
+
+.navbar{
+  .container{
+    img{width: 280px;}
+  }
+}
+
+//body
+.article{
+  .repy{
+    .intr{
+      margin: 5px 40px 0 15px;
+      padding: 15px 35px 0 35px;
+      text-indent: 1em;
+      background-color: #fbfbfb;
+      border: 1px solid #ddd;
+      &:hover{box-shadow: 0 2px 3px #888;}
+    }
+    .quoteu{
+      margin-left: -35px;
+      width: 15px;
+    }
+    .quoted{
+      margin-top: -50px;
+      margin-left: 90%;
+      width: 15px;
+      transform: rotate(180deg);
+    }
+    color: #666;
+    font-size: 16px;
+    .btn-group{
+      margin: 25px 0 40px 20px;
+      display: flex;
+      justify-content: center;
+    }
+    .btn{
+      font-size: 18px;
+      color: @light-blue;
+    }
+  }
+  .carousel-control{color: @dark-blue;}
+  .rightbtn{left: 85%;}
+  .h3{
+    margin-top: 60px;
+    padding-bottom: 15px;
+    padding-left: 30px;
+    color: @dark-blue;
+    border-bottom: 1px solid #ddd;
+  }
+  .wrap{
+    p{
+      display: inline-block;
+      width: 75%;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+    time{
+      width: 25%;
+      font-size: 16px;
+      font-family: Georgia;
+      color: #888;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+
+  //新闻快递
+  .wrap-news > ul{
+    .wrap;
+    margin-right: 40px;
+    li{
+      height: 50px;
+      padding-left: 20px;
+      line-height: 50px;
+      a{
+        .wrap;
+        font-size: 15px;
+        color: #333;
+        p{border-bottom: 1px dashed @dark-blue;}
+        &:hover{text-decoration: none;}
+      }
+    }
+  }
+  .fomr{text-decoration: underline;}
+
+  //行政公文
+  .wrap-admi > ul{
+    .wrap;
+    margin-bottom: 50px;
+    margin-right: 60px;
+    li{
+      margin-top: 25px;
+      height: 30px;
+      padding-left: 20px;
+      line-height: 30px;
+      a{
+        font-size: 15px;
+        color: #333;
+        p{
+          padding-left: 20px;
+          border-left: 1px solid #aaa;
+        }
+        &:hover{text-decoration: none;}
+      }
+    }
+  }
+
+  //通知公告
+  .wrap-annc{
+    margin: 20px;
+    background-color: #f8f8f8;
+    box-shadow: 0 0 1px #333;
+    &:hover{box-shadow: 0 0 2px #333;}
+    li{
+      margin: 0 30px;
+      padding: 15px;
+      border-bottom: 1px dashed @dark-blue;
+      &:last-child{margin-bottom: 10px;}
+      a:hover{text-decoration: none;}
+    }
+    .otherli{
+      text-decoration: underline;
+      text-align: right;
+      border: none;
+    }
+  }
+}
+
+//footer
+footer{
+  color: #f8f8f8;
+  background-color: #272727;
+  .footer-top{
+    margin-bottom: 30px;
+    .h4{
+      margin-top: 20px;
+      margin-bottom: 20px;
+      padding: 10px 0;
+      border-bottom: 1px dotted #f8f8f8;
+      span{
+        padding: 10px 15px;
+        border-bottom: 2px solid @light-blue;
+      }
+    }
+    .h5{padding: 10px 25px;}
+    a{
+      color: #ddd;
+      &:hover{
+        color: @font-blue;
+        text-decoration: none;
+      }
+    }
+    .phus .h5{padding-bottom: 5px;}
+    .othf{
+      .about-us{border-bottom: 1px solid #353535;}
+      .row{
+        span{
+          padding: 20px 0;
+          text-align: center;
+        }
+      }
+    }
+    .telp img{
+      margin-left: 30px;
+      width: 120px;
+    }
+  };
+  .footer-bottom{
+    height: 50px;
+    background-color: #202020;
+    span{
+      line-height: 50px;
+      color: #dfdfdf;
+    }
+  };
+}
+
+//返回顶部
+.toTop{
+  position: fixed;
+  z-index: 999;
+  bottom: 5px;
+  right: 20px;
+  width: 35px;
+  height: 35px;
+  font-size: 20px;
+  color: #f8f8f8;
+  text-align: center;
+  line-height: 38px;
+  background-color: #222;
+  border-radius: 3px;
+  cursor: pointer;
+  &:hover{background-color: @dark-blue;}
+}
+
+//禁用
+.forbid{
+  color: #777;
+  cursor: not-allowed;
+}

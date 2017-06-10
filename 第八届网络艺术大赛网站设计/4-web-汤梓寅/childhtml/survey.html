@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>部门简介</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/initialization.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link href="../css/hover.css" rel="stylesheet" media="all">
+    <style>
+        a{color: #555;}
+        a:hover{text-decoration: none;}
+        footer{margin-top: 50px;}
+        article li{
+            margin-top: 20px;
+            font-size: 16px;
+        }
+        h4{
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        .survey{
+            margin-top: 30px;
+            cursor: pointer;
+        }
+        .survey p{
+            color: #bbb;
+            font-weight: bold;
+            font-size: 18px;
+        }
+    </style>
+    <script src="../js/build/react.js"></script>
+    <script src="../js/build/react-dom.js"></script>
+    <script src="../js/build/browser.min.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container nav-container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="navbar-brand">
+                <img class="pull-left" id="impl" src="../img/logo_d.png" alt="logo">
+                <span class="pull-left">学校办公室</span>
+            </div>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar navbar-nav navbar-right">
+                <li><a href="../index.html"><span class="glyphicon glyphicon-home"></span> 首页</a></li>
+                <li class="active"><a href="#">部门简介</a></li>
+                <li><a href="rule.html">规章制度</a></li>
+                <li class="disabled"><a href="#">统战工作</a></li>
+                <li class="disabled"><a href="#">法制工作</a></li>
+                <li class="disabled"><a href="#">信息公开</a></li>
+                <li><a href="download.html">下载专区</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container article">
+    <div id="arr"></div>
+    <script type="text/babel">
+        var LikeButton = React.createClass({
+            getInitialState: function() {
+                return {flag: false};
+            },
+            objClick: function() {
+                this.setState({flag: false});
+            },
+            surClick: function () {
+                this.setState({flag: true});
+            },
+            obj: <article>
+                <ul>
+                    <li>学校办公室是学校党委和行政的综合办事机构。其主要职能是围绕学校中心工作，积极发挥学校领导班子的参谋助手、学校的信息枢纽、部门的综合协调、工作的督促落实等作用，把握大局，服务领导，服务部门，服务基层，做好组织协调、督查督办、公文处理、信息沟通、信访接待、机要保密、对外联络、重要活动组织、综合管理服务和领导交办的其他工作。</li>
+                    <li>学校办公室下设法制办公室，内设校务办公室、党务办公室、信息与信访办公室、文秘办公室四个科室。</li>
+                    <li>学校办公室与党委统战部合署办公，内设统战工作办公室。<br/><br/></li>
+                </ul>
+                <h4><b>学校办公室主要工作职责：</b></h4>
+                <ol>
+                    <li>1、负责学校党委会、党政联席会、校长办公会及专题办公会等党务、政务会议的具体组织工作，编印会议纪要，督促、协调会议决定及其他重要决策的贯彻落实；</li>
+                    <li>2、根据校领导的指示和授权，综合协调党委及行政各部门、各学院的工作关系及有关事宜，做好督促检查工作；</li>
+                    <li>3、处理学校日常事务，组织、协调学校重大事项和大型活动，开展对外联络，接待重要来宾；</li>
+                    <li>4、协调安排校领导分管部门及联系基层工作，安排校领导会议、出行、接待等日常事务，完成校领导交办的各项任务；</li>
+                    <li>5、负责起草学校的重要文件和学校领导的重要讲话；</li>
+                    <li>6、负责校党委及行政公文的处理工作，指导校内各单位的公文处理工作，规范校级规章制度的制定、修订、废止和发布；</li>
+                    <li>7、负责群众来信来访工作和学生校长助理的管理，做好校内外、上下级的沟通协调；</li>
+                    <li>8、负责全校信息的收集、汇总、上报和下发，负责学校信息公开工作；</li>
+                    <li>9、协调并负责全校办公自动化系统的推进工作；</li>
+                    <li>10、负责学校校史校志编纂、年鉴编辑工作；</li>
+                    <li>11、负责全校保密工作及机要文件收发；</li>
+                    <li>12、维护学校形象，负责学校校名、校标、校徽、校旗、校歌、校章、校花、校树及学校声誉等无形资产的使用、管理工作，规范、监制学校礼品；</li>
+                    <li>13、负责校党委、校行政印章和介绍信的管理和使用，校内单位公章刻制的审核工作；</li>
+                    <li>14、承担学校党务、校务公开有关事务，负责协调、联系学校法律顾问，做好学校日常法律事务相关工作；</li>
+                    <li>15、负责学校值班工作，协调有关部门解决教师、学生学习、生活中的困难，协调应对紧急突发事件；</li>
+                    <li>16、协助校领导做好学校中层干部外出请假报备工作；</li>
+                    <li>17、完成校领导交办的其他工作。<br/><br/></li>
+                </ol>
+                <h4><b>统战部的主要职责：</b></h4>
+                <ol>
+                    <li>1、负责组织统战理论政策的学习，及时传达中央、省委有关统战工作的会议和文件精神；</li>
+                    <li>2、负责贯彻执行党的各项统一战线方针，落实党的各项统战政策；</li>
+                    <li>3、负责做好民主党派工作，支持和协助学校各民主党派基层组织围绕党的中心工作开展活动；协助民主党派搞好思想建设、组织建设和领导班子建设。</li>
+                    <li>4、负责党外人士的举荐工作，协助人大代表、政协委员开展各项活动；负责各级人大代表、政协委员工作和民主建设工作；</li>
+                    <li>5、负责与党外知识分子的联系，开展党外知识分子联谊和研讨活动，建立党员领导干部与党外知识分子联谊交友的制度，重点做好党外知识分子代表人士的工作；</li>
+                    <li>6、积极宣传党的民族宗教政策，做好少数民族教职工的工作；</li>
+                    <li>7、负责海外统战工作，做好侨胞、侨眷的有关工作；</li>
+                    <li>8、负责了解统战成员的思想动态和倾向性意见，加强信息工作，为校党委和上级决策提供参考意见，为社会和学校稳定服务；</li>
+                    <li>9、完成上级交办的其它工作。<br/><br/></li>
+                </ol>
+            </article>,
+            sur: <article>
+                <h4><b>法制办公室：</b></h4>
+                <ol>
+                    <li>1、负责学校日常法律事务工作，推进学校“依法治校”进程；</li>
+                    <li>2、收集、整理党和国家有关高等教育和高校工作的政策、法律、法规以及其他规范性文件，为学校提供政策法律信息服务；</li>
+                    <li>3、从政策上、法律上和技术上审核拟提交党委会、党政联席会和校长办公会议讨论通过的规范性文件，保障校内规章制度的统一，并使之符合党和国家的政策、法律和法规；</li>
+                    <li>4、协助党委和行政有关部门督导政策、法规、校内规章制度的实施；</li>
+                    <li>5、为学校各种权益纠纷和法律诉讼提供法律服务；</li>
+                    <li>6、清理校内各类规范性文件，向学校提出重新颁布、修改或废止的建议；</li>
+                    <li>7、参与制定、审核学校规章制度和规范性文件；</li>
+                    <li>8、负责审查学校向法院、仲裁委等司法系统出具的证明文件及学校特殊授权委托事项；</li>
+                    <li>9、负责学校常年法律顾问的聘用管理和工作协调；</li>
+                    <li>10、负责组织、协调学校有关部门应对学校层面的诉讼、仲裁，审核学校重大合同；</li>
+                    <li>11、参与有关合同的谈判、签约，协助指导合同签订及督促合同履行，负责对一般合同的审核工作；</li>
+                    <li>12、负责受理师生员工法律、政策、法规方面的咨询；</li>
+                    <li>13、完成学校交办的其他工作。<br/><br/></li>
+                </ol>
+                <h4><b>党务办公室：</b></h4>
+                <ol>
+                    <li>1、协助领导落实学校有关党务工作，具体负责与学校党委其他部门、基层党委的联系和沟通；</li>
+                    <li>2、具体安排落实东北大学党委、河北省教育工委等上级机关布置的有关工作；</li>
+                    <li>3、负责有关党务工作会议的会务工作，包括会议通知、会议室安排、材料印发等；</li>
+                    <li>4、负责学校党委文件的发文办理工作，包括党发文件的草拟（部分）、审核、登记、送签、复核、缮印、用印、送发、归档等工作；</li>
+                    <li>5、负责学校保密工作的检查、宣传，所有涉密文件资料的登记、管理和保密委员会办公室的日常工作；</li>
+                    <li>6、负责学校党委印章的使用和管理工作；</li>
+                    <li>7、学校维护安全稳定相关工作。</li>
+                    <li>8、负责校史、年鉴的编辑工作，做好组稿、统稿、审稿等各项工作；</li>
+                    <li>9、配合主任或分管副主任，对学校党政领导交办或批示要求督查的事项进行催办和督查；</li>
+                    <li>10、负责学校中层干部外出请假的信息汇总、整理工作；</li>
+                    <li>11、办公室领导交办的其它临时性工作。<br/><br/></li>
+                </ol>
+                <h4><b>校务办公室：</b></h4>
+                <ol>
+                    <li>1、学校全校性重要会议和重要活动的组织、落实；</li>
+                    <li>2、具体安排落实教育部、东北大学、河北省教育厅等上级机关布置的有关工作；</li>
+                    <li>3、负责安排现任校领导、校长助理及离退休校领导出行、用车等事务，做好有关服务工作；</li>
+                    <li>4、管理学校印信，负责校内单位刻制公章的审核及备案工作；</li>
+                    <li>5、与校外单位及兄弟院校交流有关事宜，落实上级单位、兄弟院校来我校参观、考察、调研的相关接待工作；</li>
+                    <li>6、安排落实办公室日常考勤、年度考核、职务评聘、职称评聘等部门人事工作。</li>
+                    <li>7、负责安排节假日值班工作；</li>
+                    <li>8、负责学校车辆调度工作；</li>
+                    <li>9、负责会议室使用和管理；</li>
+                    <li>10、负责全校报刊的订阅工作；</li>
+                    <li>11、负责学校办公电话管理工作；</li>
+                    <li>12、负责机要文件的收文、登记、传阅、发文、归档、销毁等工作；</li>
+                    <li>13、负责学校领导和学校办公室的办公用品、设备、家具等物资的管理、维护和更新。</li>
+                    <li>14、规范学校校名、徽标等无形资产的使用和管理。</li>
+                    <li>15、规范和管理学校礼品、纪念品的开发和使用。</li>
+                    <li>16、办公室领导交办的其它临时性工作。<br/><br/></li>
+                </ol>
+                <h4><b>信息信访办公室：</b></h4>
+                <ol>
+                    <li>1、负责学校信访办公室日常工作，接待、处理群众来访、来信、来电，对有关问题做好督促检查工作，并及时进行反馈和回复；</li>
+                    <li>2、负责学生校长助理日常管理工作；</li>
+                    <li>3、及时收集学校近期党建与思想政治工作、教学科研、学科建设、队伍建设、人才培养、国际交流、校园建设、资产、财务及后勤服务等方面工作动态及学校重大活动有关情况，呈送领导审阅；</li>
+                    <li>4、收集、筛选各种媒体关于国内外高等教育的发展趋势、发展动态和最新举措等各类信息，了解学校有关工作的进展情况及问题，掌握师生员工关注、反映的热点问题及师生的科研成果，呈送校领导参考；</li>
+                    <li>5、全面了解学校各单位开展的重要工作、活动以及值得推广的经验等，整理相关材料，编制《东北大学秦皇岛分校月重点工作情况报告》；</li>
+                    <li>6、配合学校信息化建设与管理办公室开展教育系统办公自动化建设工作，逐步推进全校办公自动化；</li>
+                    <li>7、负责学校办公室网站的维护和数据更新工作；</li>
+                    <li>8、做好学校领导及学校办公室的计算机软硬件和网络维护工作；</li>
+                    <li>9、负责学校办公室内部文书档案的保管工作，督促学校办公室各科室依据学校档案工作规范，按时完成各类文件、材料的归档工作，做好学校办公室资料室的建设与管理。</li>
+                    <li>10、整理、保存学校重大活动、重要会议、校园景观及学校领导外出考察的图片、录音资料等；</li>
+                    <li>11、负责学校办公室全体会议和例行会议的记录和纪要整理、印发工作。</li>
+                    <li>12、办公室领导交办的其它临时性工作。<br/><br/></li>
+                </ol>
+                <h4><b>文秘办公室：</b></h4>
+                <ol>
+                    <li>1、负责校内来文的收文办理工作，包括校内各单位的请示、报告等正式文件的签收、审核、登记、送签、回复、归档等工作，以及非正式文件的上传下达；</li>
+                    <li>2、负责校外来文的收文办理工作，包括上级机关及其它外单位公文、便函、传真、电话（电传）记录的启封、登记、送签、回复、归档等工作；</li>
+                    <li>3、负责学校行政文件的发文办理工作，包括行政文件的草拟（部分）、审核、登记、送签、复核、缮印、用印、送发、归档等工作；</li>
+                    <li>4、负责以学校名义发出的公函、校领导个人名义发出的邀请函及其它公文的复核、校对、登记、存档等工作；</li>
+                    <li>5、负责学校规章制度建设有关工作，规范学校规章制度的制定、修改和废止，并定期发布；</li>
+                    <li>6、承担以学校党委、行政和学校办公室名义发出的各类文件、信息刊物、会议材料等的印制工作；</li>
+                    <li>7、起草或核校学校的重要文稿和校领导的重要讲话稿；</li>
+                    <li>8、管理学校办公室印信；</li>
+                    <li>9、协助做好学校宣传画册；</li>
+                    <li>10、编辑、审定学校介绍材料；</li>
+                    <li>11、负责学校办公室内部的文娱活动；</li>
+                    <li>12、配合做好学校办公室财务工作，编制办公室年度预算，合理安排办公室各项财务开支。</li>
+                    <li>13、办公室领导交办的其它临时性工作。<br/><br/></li>
+                </ol>
+                <h4><b>统战工作办公室：</b></h4>
+                <ol>
+                    <li>1、认真贯彻执行党和国家关于民族和宗教工作的方针政策，做好统一战线理论、政策的宣传教育；</li>
+                    <li>2、协助做好民主党派工作和无党派人士工作。为各党派按照宪法和各自的章程独立自主地开展工作和活动提供服务。组织情况通报会、座谈会等, 收集、整理其对学校工作的意见和建议；</li>
+                    <li>3、协助做好归国留学人员联谊会等海外统战工作，搞好各统战团体的联谊活动；</li>
+                    <li>4、协助做好各级人大代表、政协委员等服务工作；</li>
+                    <li>5、做好党外知识分子工作；</li>
+                    <li>6、开展统战理论研究，搞好调研工作，围绕学校和地方发展建设的中心任务进行专题调研，为学校的改革发展献计出力；</li>
+                    <li>7、完成统战部交办的其他工作。<br/><br/></li>
+                </ol>
+            </article>,
+            render: function() {
+                var mess = this.state.flag ? '职责分工' : '工作职责';
+                var text = this.state.flag ? this.sur : this.obj;
+                return (
+                        <div className="row">
+                            <div className="col-sm-8 col-sm-offset-1">
+                                <span className="glyphicon glyphicon-hand-right"></span>&nbsp;
+                                <a href="../index.html">首页</a>
+                                <small>>></small>
+                                <a href="../childhtml/survey.html">部门简介</a>
+                                <small>>></small>
+                                <a href="#">{mess}</a>
+                                <hr className="divider"/>
+                                <div className="row">
+                                    <div className="col-sm-2">
+                                        <div className="survey" onClick={this.objClick}><p className="hvr-forward">工作职责</p></div>
+                                        <div className="survey" onClick={this.surClick}><p className="hvr-forward">职责分工</p></div>
+                                    </div>
+                                    <div className="col-sm-9 col-sm-offset-1">{text}</div>
+                                </div>
+                            </div>
+                        </div>
+                );
+            }
+        });
+        ReactDOM.render(
+                <LikeButton />,
+            document.getElementById('arr')
+        );
+    </script>
+</div>
+<footer>
+    <div class="container footer-top">
+        <div class="row">
+            <div class="col-md-5 phus">
+                <div class="h4"><span>联系我们</span></div>
+                <div class="h5">地址：河北省秦皇岛市经济技术开发区泰山路143号</div>
+                <div class="h5">邮编：066004</div>
+                <div class="h5">电话：0335-8052479</div>
+                <div class="h5">电话：0335-8051795</div>
+            </div>
+            <div class="col-md-4 othf">
+                <div class="h4"><span>其他服务</span></div>
+                <div class="row about-us">
+                    <span class="col-xs-3"><a href="serve.html">服务指南</a></span>
+                    <span class="col-xs-3"><a href="telep.html">办公电话</a></span>
+                    <span class="col-xs-3">OA系统</span>
+                </div>
+                <div class="row">
+                    <span class="col-xs-3"><a href="statis.html">统计工作</a></span>
+                    <span class="col-xs-3">保密工作</span>
+                    <span class="col-xs-3">大事记</span>
+                </div>
+            </div>
+            <div class="col-md-3 telp">
+                <div class="h4"><span>手机访问</span></div>
+                <img src="../img/ewm.png" alt="二维码">
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom"><div class="container"><span>版权所有&nbsp;&copy;&nbsp;东北大学秦皇岛分校&nbsp;学校办公室</span></div></div>
+</footer>
+<div class='toTop' style="opacity: 1;" title="返回顶部">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+</div>
+<script src="../js/jquery-3.2.1.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/other.js"></script>
+</body>
+</html>

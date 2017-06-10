@@ -1,0 +1,153 @@
+#x{
+              width: 200px;
+              height:150px;
+              position: absolute;
+              left: 130px;
+              top: 16px;
+ }
+ #f1{
+ 	font-size: 30px;
+ }
+ #header1{
+ 	color: black;
+ 	font-family: STXingkai;
+ 	width: 300px;
+ 	height: 120px;
+ 	position: absolute;
+ 	left:300px;
+ 	top:0;
+ 	line-height: 120px;
+ 	font-size: 25px;
+ }
+ #english1{
+ 	color: black;
+ 	font-family: SimHei;
+ 	width: 300px;
+ 	height: 60px;
+ 	line-height: 30px;
+ 	position: absolute;
+ 	left: 300px;
+ 	top:80px;
+ 	font-size: 21px;
+ }
+  #header2{
+ 	color: black;
+ 	font-family: STXingkai;
+ 	width: 300px;
+ 	height: 120px;
+ 	position: absolute;
+ 	left:600px;
+ 	top:0px;
+ 	line-height: 120px;
+ 	font-size: 28px;
+ } 
+ #english2{
+ 	color: black;
+ 	font-family: SimHei;
+ 	width: 300px;
+ 	height: 60px;
+ 	line-height: 30px;
+ 	position: absolute;
+ 	left: 600px;
+ 	top:80px;
+ 	font-size: 18px;
+ }
+
+ .nav{   
+	position: absolute;
+	left: 5%;
+	top:29%;
+	width: 150px; 
+	border-bottom: none;
+}
+
+.nav ul li{ 
+	font-size: 35px;
+	text-align:center; 
+	height: 70px; 
+	line-height: 70px; 
+	position:relative;
+	font-family: STXingkai;
+}
+
+.nav ul li a{ 
+	color:rgb(223,79,17);
+}
+
+.nav ul li a:hover{ 
+	color:rgb(72,21,142);
+	text-decoration: none;
+}
+.nav ul li ul {
+	position: absolute;
+	left: 150px;
+	top: -70px;
+	width: 250px;
+	border-bottom: none;
+	display: none;
+}
+#ul2{
+	top: -200px;
+}
+.nav ul li ul li a{
+	color: red;
+	font-size: 30px;
+}
+.nav ul li:hover ul
+{ 
+	display:block;
+}
+#right{
+	margin-top: 230px;
+	margin-left: 500px;
+	background-color: white;
+	border: 1px solid black;
+	height: 420px;
+	width: 700px;
+	opacity: 0.7;
+
+}
+#r1{
+	line-height: 30px;
+	color: black;
+	font-family: SimSun;
+	background-color: white;
+	border: 1px solid black;
+	height: 30px;
+	width: 700px;
+	background-opacity: 0.7;
+	text-indent: 5px;
+}
+.r2{
+	background-color: white;
+	border: 1px solid black;
+	background-opacity: 0.7;
+	height: 390px;
+	line-height: 30px;
+	font-size: 15px;
+	font-family: SimSun;
+	width: 700px;
+	text-indent: 15px;
+}
+.r2 ul li{
+	text-decoration: rtl;
+	display:block;
+	width: 700px;
+	height: 30px;
+}
+#telephone{
+	font-family: SimSun;
+	color: black;
+	text-align: center;
+	height: 20px;
+	margin-top:80px;
+	font-size: 20px;
+	line-height: 20px;
+}
+#footer{
+	color: gray;
+	text-align: center;
+	height: 10px;
+	margin-top:0px;
+	font-size: 12px;
+}

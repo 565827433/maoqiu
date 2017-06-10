@@ -1,0 +1,9 @@
+*{ margin:0; padding:0;}
+body { background:#fff; color:#555; font-size:14px;}
+img { border:none;}
+ol,ul,li { list-style:none; }
+input, textarea, select, button {font:14px Verdana,Helvetica,Arial,sans-serif;}
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height:0;}
+article,aside,dialog,figure,footer,header,legend,nav,section{display: block;}
+a{color: #333;}
+a:hover ,a:focus, a:active{color: #333;text-decoration: none;}
